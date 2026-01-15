@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Rounded Mplus 1c Bold";
+  src: url("./fonts/MPLUSRounded1c-Bold.ttf");
+  font-family: "Rounded Mplus 1c Regular";
+  src: url("./fonts/MPLUSRounded1c-Regular.ttf");
+}
+
+html {
+  font-size: 18px;
+}
+   
+body {
+  margin: 0 auto;
+  font-family: "Rounded Mplus 1c Bold";
+  background-color: #DEDEDE;
+  padding: 0;
+  max-width: 1440px;
+  width: 100%;
+  min-width: 400px;
+  align-items: center;
+  justify-content: center;
+}
+   
+.background_orange {
+  background-color: rgba(255, 187, 115, 1);
+}
+
+.background_white {
+  background-color: #F4EEE8;
+}

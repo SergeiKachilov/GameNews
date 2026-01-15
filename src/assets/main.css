@@ -1,0 +1,134 @@
+@import './base.css';
+
+/* #app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+} */
+
+@media (min-width: 1265px) {
+  html {
+    font-size: 18px;
+  }
+
+  .main-body {
+    flex-direction: row;
+  }
+
+  .main-body__news-list {
+    max-width: 60%;
+  }
+
+  .main-body__game-container {
+    max-width: 38.8%;
+  }
+
+  .header {
+    display: flex;
+  }
+}
+
+@media (max-width: 1265px) {
+  html {
+    font-size: 14px;
+  }
+
+  .main-body {
+    flex-direction: row;
+  }
+
+  .main-body__news-list {
+    max-width: 60%;
+  }
+
+  .main-body__game-container {
+    max-width: 38.8%;
+  }
+
+  .header {
+    display: flex;
+  }
+}
+
+@media (max-width: 985px) {
+  html {
+    font-size: 10px;
+  }
+
+  .main-body {
+    flex-direction: row;
+  }
+  
+
+  .header {
+    display: flex;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-body__news-list {
+    max-width: 100%;
+  }
+
+  .main-body__game-container {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 705px) {
+  html {
+    font-size: 8px;
+  }
+
+  .main-body {
+    flex-direction: column;
+  }
+
+  .header {
+    display: flex;
+  }
+}
+
+@media (max-width: 565px) {
+  .header {
+    display: none;
+    background-color: black;
+  }
+
+  .main-body {
+    flex-direction: column;
+  }
+}

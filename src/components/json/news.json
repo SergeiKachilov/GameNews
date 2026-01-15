@@ -1,0 +1,41 @@
+[
+     {
+          "id": "0",
+          "type": "Новость",
+          "text": "Resident Evil Requiem добавили в вишлист более 2 млн раз",
+          "rating": "5.0",
+          "comments": "32",
+          "image": "/src/components/img/RE_Requiem.png",
+          "file": "/src/components/txt/RE.txt"
+     },
+
+     {
+          "id": "1",
+          "type": "Видеообзор",
+          "text": "Dying Light: The Beast: Ты человек или кто",
+          "rating": "4.0",
+          "comments": "10",
+          "image": "/src/components/img/Dying Light.png",
+          "file": "/news"
+     },
+
+     {
+          "id": "2",
+          "type": "Новость",
+          "text": "У Clair Obscur: Expedition 33 больше всего номинаций на Golden Joystick Awards 2025",
+          "rating": "4.5",
+          "comments": "11",
+          "image": "/src/components/img/Clair Obscur.png",
+          "file": "/news"
+     },
+
+     {
+          "id": "3",
+          "type": "Новость",
+          "text": "Авторы Helldivers 2 пояснили, почему на ПК игра занимает так много места",
+          "rating": "3.0",
+          "comments": "22",
+          "image": "/src/components/img/Helldivers 2.png",
+          "file": "/news"
+     }
+]
