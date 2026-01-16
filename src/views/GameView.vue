@@ -1,41 +1,96 @@
 <script setup>
      import Comment from '@/components/Comment.vue';
+     import { useRoute } from 'vue-router';
+     import { onMounted, ref } from 'vue';
+
+     const game = ref({});
+     const games_json = ref([]);
+     const text_array = ref([]);
+     const route = useRoute();
+     // let id = route.params.newsId;
+     Start();
+
+     async function Start() {
+          // await fetch("/src/components/json/games.json")
+          // .then((resp) => resp.json())
+          // .then((json) => {
+          //      games_json.value = json;
+          //      console.log(json);
+          // })
+          await ReadJson();
+          ReadTxt();
+     }
+
+     function GetInfo(id) {
+          console.log("el");
+          games_json.value.forEach(el => {
+               if (el.id == id) {
+                    console.log("asd");
+                    game.value = el;
+               }
+          });
+     }
+
+     async function ReadJson(id) {
+          await fetch("/src/components/json/games.json")
+          .then((resp) => resp.json())
+          .then((json) => {
+               games_json.value = json;
+               console.log(json);
+               json.forEach(el => {
+                    if (el.id == id) {
+                         console.log("asd");
+                         game.value = el;
+                    }
+               });
+               GetInfo(route.params.gameId);
+          })
+     }
+
+     function ReadTxt() {
+          let file = game.value.text;
+          fetch(file)
+          .then(response => response.text())
+          .then(text => {
+               text_array.value = text.split('\n');
+          });
+     }
+
+     onMounted(async () => {
+          ReadTxt();
+     })
 </script>
 
 <template>
      <div class="main-body">
           <div class="game background_white">
                <div class="game__info-container">
-                    <img src="../components/img/RE_RequiemLogo.png" alt="" class="game__logo">
+                    <img :src="game.logo" alt="" class="game__logo">
                     <div class="game__info">
-                         <p class="game__name background_orange">Resident Evil Requiem</p>
+                         <p class="game__name background_orange">{{game.name}}</p>
                          <div class="game__middle">
-                              <p class="game__genres background_orange">Экшен Приключение Хоррор Выживание</p>
-                              <p class="game__developer background_orange">Capcom</p>
+                              <p class="game__genres background_orange">{{ game.genre.join(', ') }}</p>
+                              <p class="game__developer background_orange">{{ game.developer }}</p>
                          </div>
                          <div class="game__bottom">
                               <div class="game__rating">
-                                   <p class="game__total-rating background_orange">Общий рейтинг: 5.0</p>
-                                   <p class="game__local-rating background_orange">Рейтинг на сайте: 4.3</p>
+                                   <p class="game__total-rating background_orange">Рейтинг Steam: {{ game.steam_rating }}</p>
+                                   <p class="game__local-rating background_orange">Рейтинг на сайте: {{game.site_rating}}</p>
                               </div>
-                              <p class="game__release-date background_orange">27.02.2026</p>
+                              <p class="game__release-date background_orange">Релиз: {{game.release_date}}</p>
 
                          </div>
                     </div>
                </div>
-               <p class="game__text background_orange">Сюжет игры описывает 
-                    заброшенный отель, где было обнаружено тело жертвы с 
-                    неопознанной болезнью. На расследование этого дела 
-                    назначается аналитик ФБР Грейс Эшкрофт. Отель имеет 
-                    для неё особое значение: именно здесь восемь лет назад 
-                    погибла её мать. Это обстоятельство вынуждает Грейс 
-                    столкнуться с личным прошлым, а само расследование приводит 
-                    к раскрытию скрытой правды о вспышке биологической катастрофы 
-                    в Раккун-Сити.</p>
+               <div class="game__text background_orange">
+                    <p class="game__paragraph" v-for="paragraph in text_array">{{ paragraph }}</p>
+               </div>
           </div>
 
           <div class="comments">
-               <comment></comment>
+               <comment v-for="comment in game.comments"
+               :comment="comment"
+               ></comment>
           </div>
      </div>
 </template>
@@ -57,7 +112,7 @@
           border-radius: 15px;
      }
 
-     .game p {
+     .game__info p {
           margin: 0;
           box-sizing: border-box;
           display: flex;
@@ -83,6 +138,7 @@
 
      .game__logo {
           width: 9.2rem;
+          border-radius: 25px;
      }
 
      .game__info {
@@ -123,6 +179,7 @@
 
      .game__release-date {
           width: 20%;
+          font-size: 1rem;
      }
 
      .game__rating {
@@ -135,11 +192,17 @@
 
      .game__text {
           width: 55.5rem;
-          font-size: 1.3rem;
+          font-size: 2rem;
           padding: 1.5rem 1.5rem;
           box-sizing: border-box;
           text-align: justify;
           border-radius: 15px;
+     }
+
+     .game__paragraph {
+          margin: 0;
+          margin-bottom: 1rem;
+          text-indent: 2rem;
      }
 
      .comments {
@@ -147,7 +210,8 @@
 
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: center;     
           
+          gap: 1rem;
      }
 </style>

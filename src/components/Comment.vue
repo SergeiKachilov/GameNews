@@ -1,22 +1,28 @@
 <script setup>
+     import { defineProps } from 'vue';
 
+     let props = defineProps ({
+          comment: {
+               type: Object,
+          }
+     })
 </script>
 
 <template>
      <div class="comment background_white">
           <div class="comment__top">
-               <p class="comment__time background_orange">Сегодня, 15:18</p>
-               <p class="comment__nickname background_orange">Requiem_For_A_Dream</p>
+               <p class="comment__time background_orange">{{comment.date}}</p>
+               <p class="comment__nickname background_orange">{{comment.username}}</p>
           </div>
           
           <div class="comment__middle">
-               <img src="/src/components/img/Requiem.png" alt="" class="comment__avatar">
-               <p class="comment__text background_orange">Пусть предзаказы открывают.</p>
+               <img :src="comment.avatar" alt="" class="comment__avatar">
+               <p class="comment__text background_orange">{{comment.text}}</p>
           </div>
           
           <div class="comment__bottom">
                <p class="comment__btn background_orange">+</p>
-               <p class="comment__rate background_orange">-1</p>
+               <p class="comment__rate background_orange">{{comment.rating}}</p>
                <p class="comment__btn background_orange">-</p>
           </div>
      </div>
@@ -54,9 +60,12 @@
 
      .comment__time {
           width: 15%;
+          text-align: center;
      }
 
      .comment__nickname {
+          width: 13.6rem;
+          text-align: center;
           font-weight: bold;
      }
 
@@ -70,12 +79,13 @@
 
      .comment__avatar {
           width: 15%;
+          border-radius: 50%;
      }
 
      .comment__text {
           width: 100%;
-          height: 1em;
           font-size: 1.8rem;
+          padding: 1rem;
      }
 
      .comment__bottom {

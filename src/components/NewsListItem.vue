@@ -2,53 +2,23 @@
      import { defineProps } from 'vue';
      import { RouterLink } from 'vue-router';
      const props = defineProps({
-          id: {
-               type: String,
-          },
-
-          type: {
-               type: String,
-               default: "Новость",
-          },
-
-          text: {
-               type: String,
-               default: "...",
-          },
-
-          rating: {
-               type: String,
-               default: "0.0",
-          },
-
-          comments: {
-               type: String,
-               default: "0",
-          },
-
-          image: {
-               type: String,
-               default: "/"
-          },
-
-          file: {
-               type: String,
-               default: "/"
+          news: {
+               type: Object,
           }
      })
 </script>
 
 <template>
-     <RouterLink :to="{name: 'news', params: {newsId: +id}}" class="main-body__news background_white">
-          <img :src="image" alt="" class="main-body__news-img">
+     <RouterLink :to="{name: 'news', params: {newsId: +news.id}}" class="main-body__news background_white">
+          <img :src="news.image" alt="" class="main-body__news-img">
           <div class="main-body__news-info">
-               <p class="main-body__news-type background_orange">{{type}}</p>
-               <p class="main-body__news-content background_orange">{{text}}</p>
+               <p class="main-body__news-type background_orange">{{news.type}}</p>
+               <p class="main-body__news-content background_orange">{{news.text}}</p>
                <div class="main-body__news-rating-container">
-                    <p class="main-body__news-rating background_orange">{{rating}}</p>
+                    <p class="main-body__news-rating background_orange">{{news.rating}}</p>
                     <div class="main-body__news-comments-container background_orange">
                             
-                         <p class="main-body__news-comments"><img src="../components/icons/commentIcon.svg" alt="" class="main-body__news-comments-icon">{{comments}}</p>
+                         <p class="main-body__news-comments"><img src="../components/icons/commentIcon.svg" alt="" class="main-body__news-comments-icon">{{news.commentaries.length}}</p>
                     </div>
                </div>
           </div>

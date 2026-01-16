@@ -19,6 +19,17 @@
           });
      }
 
+     ReadJson();
+
+     function ReadJson() {
+          fetch("/src/components/json/news.json")
+          .then((resp) => resp.json())
+          .then((json) => {
+               news_json.value = json;
+               console.log(json);
+               GetInfo(route.params.newsId);
+          })
+     }
      function ReadTxt() {
           let file = news.value.file;
           fetch(file)
@@ -29,13 +40,6 @@
      }
 
      onMounted(async () => {
-          await fetch("/src/components/json/news.json")
-          .then((resp) => resp.json())
-          .then((json) => {
-               news_json.value = json;
-               console.log(json);
-          })
-          GetInfo(route.params.newsId);
           ReadTxt();
      })
 </script>
@@ -43,7 +47,7 @@
 <template>
      <div class="main-body">
           <div class="main background_white">
-               <div class="main__title-container">
+               <div class="main__title-container" :style="`background-image: url(${news.image});`">
                     <!-- <img src="/src/components/img/RE wishlist.png" alt="" class="main__cover"> -->
                     <p class="main__title background_orange">{{ news.text }}</p>
                </div>
@@ -51,7 +55,7 @@
                <div class="main__info">
                     <p class="main__rating background_orange">Рейтинг {{news.rating}}</p>
                     <p class="main__type background_orange">{{ news.type }}</p>
-                    <p class="main__comments background_orange"><img src="../components/icons/commentIcon.svg" alt="" class="main__comments-img">{{news.comments}}</p>
+                    <p class="main__comments background_orange"><img src="../components/icons/commentIcon.svg" alt="" class="main__comments-img">{{news.commentaries.length}}</p>
                </div>
      
                <div class="main__text-container background_orange">
@@ -60,7 +64,9 @@
           </div>
      
           <div class="comments">
-               <comment></comment>
+               <comment v-for="comment in news.commentaries"
+               :comment="comment"
+               ></comment>
           </div>
      </div>
 </template>
@@ -86,8 +92,8 @@
      
      .main__title-container {
           width: 78.5%;
-          height: 200px;
-          background-image: url("/src/components/img/RE wishlist.png");
+          height: 25rem;
+          /* background-image: url("/src/components/img/RE wishlist.png"); */
           background-size: cover;
           background-position: center center;
           display: flex;
@@ -105,17 +111,18 @@
           text-align: center;
           font-size: 2rem;
           font-weight: bold;
-          border-radius: 41px;
+          border-radius: 25px;
           margin: 0;
      }
 
      .main__info {
           margin-top: 12px;
           margin-bottom: 12px;
-          width: 34%;
+          width: 50rem;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          font-size: 1.5rem;
      }
 
      .main__rating, .main__type, .main__comments {
@@ -142,13 +149,14 @@
           box-sizing: border-box;
           width: 94.4%;
           border-radius: 41px;
+          text-indent: 2rem;
 
           text-align: justify;
      }
 
      .main__text {
           width: 82.4%;
-          font-size: 1.6rem;
+          font-size: 1.8rem;
      }
 
      .comments {

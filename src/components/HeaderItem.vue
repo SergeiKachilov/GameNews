@@ -9,8 +9,8 @@
               <RouterLink to="/" class="header__title-a header__a">GameVox</RouterLink>
           </div>
           <nav class="header__nav background_orange">
-              <RouterLink to="/about" class="header__nav-a header__a">Новости</RouterLink>
-              <RouterLink to="" class="header__nav-a header__a">Игры</RouterLink>
+              <RouterLink to="/news" class="header__nav-a header__a">Новости</RouterLink>
+              <RouterLink to="/gameList" class="header__nav-a header__a">Игры</RouterLink>
               <div class="header__search header__a">
                   <RouterLink to="" class="header__nav-a header__a"><img src="./icons/searchIcon.svg" alt="" class="header__search-icon">Поиск</RouterLink>
 

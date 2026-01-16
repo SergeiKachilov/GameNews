@@ -19,13 +19,7 @@ import { RouterLink } from 'vue-router';
   <div class="main-body">
         <div class="main-body__news-list">
             <news-list-item v-for="news in news_json"
-                :id="news.id"
-                :type="news.type"
-                :text="news.text"
-                :rating="news.rating"
-                :comments="news.comments"
-                :image="news.image"
-                :file="news.file"
+                :news="news"
             ></news-list-item>
             <!-- <a href="" class="main-body__news background_white">
                 <img src="../components/img/RE Requiem.png" alt="" class="main-body__news-img">
