@@ -78,7 +78,7 @@
           width: 100%;
           text-align: left;
           text-decoration: none;
-          font-size: 1rem;
+          font-size: 1.2rem;
           border-radius: 15px;
           margin: 0;
           padding: 0.3rem 0.6rem;

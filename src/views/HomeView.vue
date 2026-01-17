@@ -1,7 +1,9 @@
 <script setup>
-    import {ref, onMounted} from 'vue';
     import NewsListItem from '@/components/NewsListItem.vue';
-import { RouterLink } from 'vue-router';
+    import FooterItem from '@/components/FooterItem.vue';
+
+    import {ref, onMounted} from 'vue';
+    import { RouterLink } from 'vue-router';
 
     const news_json = ref([]);
 
@@ -156,7 +158,6 @@ import { RouterLink } from 'vue-router';
         gap: 0.6rem;
         margin: 0px auto;
         padding: 0px;
-        padding-top: 10px;
         flex-wrap: wrap;
         vertical-align: top;
         /* border: solid black; */

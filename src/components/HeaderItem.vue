@@ -9,7 +9,7 @@
               <RouterLink to="/" class="header__title-a header__a">GameVox</RouterLink>
           </div>
           <nav class="header__nav background_orange">
-              <RouterLink to="/news" class="header__nav-a header__a">Новости</RouterLink>
+              <RouterLink to="/newsList" class="header__nav-a header__a">Новости</RouterLink>
               <RouterLink to="/gameList" class="header__nav-a header__a">Игры</RouterLink>
               <div class="header__search header__a">
                   <RouterLink to="" class="header__nav-a header__a"><img src="./icons/searchIcon.svg" alt="" class="header__search-icon">Поиск</RouterLink>
@@ -17,9 +17,11 @@
               </div>
           </nav>
           <div class="header__authorization background_orange">
-              <div class="header__a header__authorization-a">
-                  <RouterLink to="" class="header__a"><img src="./icons/authorizationIcon.svg" alt="" class="header__authorization-icon">Вход | Регистрация</RouterLink>
-              </div>
+               <RouterLink to="/signIn" class="header__authorization-btn">
+                    <div class="header__a header__authorization-a">
+                         <p class="header__a"><img src="./icons/authorizationIcon.svg" alt="" class="header__authorization-icon">Вход | Регистрация</p>
+                    </div>
+               </RouterLink>
           </div>
      </header>
 </template>
@@ -115,10 +117,16 @@
           display: flex;
           flex-direction: row;
           align-items: center;
-          justify-content: space-around;
+          justify-content: center;
           border-radius: 41px;
           padding: 0 1.1rem;
           font-size: 1.5rem;
+     }
+     
+     .header__authorization-btn {
+          width: 100%;
+          display: flex;
+          text-decoration: none;
      }
 
      .header__authorization-a {
@@ -133,4 +141,5 @@
           width: 100%;
           margin-right: 0.6rem;
      }
+
 </style>
