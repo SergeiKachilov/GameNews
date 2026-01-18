@@ -22,13 +22,19 @@
      }
 
      function CheckData() {
+          if(password.value != "" || login.value != "" || email.value != "" || confirm.value != "")
+     {
           if(CheckEmail()) {
-               if(CheckPassword()) {
-                    alert("Успешная регистрация");
+                    if(CheckPassword()) {
+                         alert("Успешная регистрация");
+                    }
+               }
+               else {
+                    alert_message.value = "Неверный формат почты!"
                }
           }
           else {
-               alert_message.value = "Неверный формат почты!"
+               alert_message.value = "Все поля должны быть заполнены!"
           }
      }
 
@@ -63,6 +69,7 @@
      }
 
      .register {
+          min-width: 400px;
           width: 40%;
           padding: 1rem;
           border-radius: 15px;

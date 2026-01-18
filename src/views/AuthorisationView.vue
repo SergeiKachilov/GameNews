@@ -26,6 +26,7 @@
      }
 
      .signin {
+          min-width: 400px;
           width: 40%;
           padding: 1rem;
           border-radius: 15px;

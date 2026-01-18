@@ -21,9 +21,9 @@
           </div>
           
           <div class="comment__bottom">
-               <p class="comment__btn background_orange">+</p>
-               <p class="comment__rate background_orange">{{comment.rating}}</p>
                <p class="comment__btn background_orange">-</p>
+               <p class="comment__rate background_orange">{{comment.rating}}</p>
+               <p class="comment__btn background_orange">+</p>
           </div>
      </div>
 </template>
@@ -59,7 +59,7 @@
      }
 
      .comment__time {
-          width: 15%;
+          width: 10%;
           text-align: center;
      }
 
@@ -80,6 +80,7 @@
      .comment__avatar {
           width: 15%;
           border-radius: 50%;
+          box-sizing: border-box;
      }
 
      .comment__text {

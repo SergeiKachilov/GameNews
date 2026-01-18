@@ -1,5 +1,5 @@
 <script setup>
-     import { RouterLink, RouterView } from 'vue-router'
+     import { RouterLink } from 'vue-router'
 </script>
 
 <template>
@@ -12,7 +12,7 @@
               <RouterLink to="/newsList" class="header__nav-a header__a">Новости</RouterLink>
               <RouterLink to="/gameList" class="header__nav-a header__a">Игры</RouterLink>
               <div class="header__search header__a">
-                  <RouterLink to="" class="header__nav-a header__a"><img src="./icons/searchIcon.svg" alt="" class="header__search-icon">Поиск</RouterLink>
+                  <RouterLink to="/" class="header__nav-a header__a"><img src="./icons/searchIcon.svg" alt="" class="header__search-icon">Поиск</RouterLink>
 
               </div>
           </nav>
@@ -92,6 +92,8 @@
           max-width: 12.3rem;
           width: 100%;
           height: 3.7rem;
+          padding: 0 1rem;
+          box-sizing: border-box;
      }
 
      .header__search {
@@ -142,4 +144,27 @@
           margin-right: 0.6rem;
      }
 
+     @media (max-width: 565px) {
+          .header {
+               display: flex;
+               flex-direction: column;
+               height: auto;
+               width: auto;
+               padding: 1rem;
+          }
+
+          .header__nav {
+               flex-direction: column;
+               height: auto;
+               width: auto;
+               padding: 1rem;
+               border-radius: 15px;
+               width: 10em;
+          }
+
+          .header__nav-a, .header__search {
+               width: 100%;
+               max-width: none;
+          }
+     }
 </style>

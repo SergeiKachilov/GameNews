@@ -191,7 +191,7 @@
      }
 
      .game__text {
-          width: 55.5rem;
+          width: 100%;
           font-size: 2rem;
           padding: 1.5rem 1.5rem;
           box-sizing: border-box;

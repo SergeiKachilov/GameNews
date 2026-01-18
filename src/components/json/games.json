@@ -108,7 +108,7 @@
                     "avatar": "/src/components/img/Alexander.png",
                     "date": "25 ноября",
                     "text": "Хорошая игра",
-                    "rating": 1
+                    "rating": 4
                },
                {
                     "id": 6,
@@ -116,7 +116,7 @@
                     "avatar": "/src/components/img/GaryZhelezo.png",
                     "date": "23 ноября",
                     "text": "Хороший хорор, средний соулс-лайк",
-                    "rating": 1
+                    "rating": 2
                }
           ]
      },

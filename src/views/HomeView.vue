@@ -23,69 +23,10 @@
             <news-list-item v-for="news in news_json"
                 :news="news"
             ></news-list-item>
-            <!-- <a href="" class="main-body__news background_white">
-                <img src="../components/img/RE Requiem.png" alt="" class="main-body__news-img">
-                <div class="main-body__news-info">
-                    <p class="main-body__news-type background_orange">Новость</p>
-                    <p class="main-body__news-content background_orange">Resident Evil Requiem добавили в вишлист более 2 млн раз</p>
-                    <div class="main-body__news-rating-container">
-                        <p class="main-body__news-rating background_orange">Рейтинг 5.0</p>
-                        <div class="main-body__news-comments-container background_orange">
-                            
-                            <p class="main-body__news-comments"><img src="../components/icons/commentIcon.svg" alt="" class="main-body__news-comments-icon">32</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="" class="main-body__news background_white">
-                <img src="../components/img/Dying Light.png" alt="" class="main-body__news-img">
-                <div class="main-body__news-info">
-                    <p class="main-body__news-type background_orange">Видеообзор</p>
-                    <p class="main-body__news-content background_orange">Dying Light: The Beast: Ты человек или кто</p>
-                    <div class="main-body__news-rating-container">
-                        <p class="main-body__news-rating background_orange">Рейтинг 4.0</p>
-                        <div class="main-body__news-comments-container background_orange">
-                            
-                            <p class="main-body__news-comments"><img src="../components/icons/commentIcon.svg" alt="" class="main-body__news-comments-icon">10</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="" class="main-body__news background_white">
-                <img src="../components/img/Clair Obscur.png" alt="" class="main-body__news-img">
-                <div class="main-body__news-info">
-                    <p class="main-body__news-type background_orange">Новость</p>
-                    <p class="main-body__news-content background_orange">У Clair Obscur: Expedition 33 больше всего номинаций на Golden Joystick Awards 2025</p>
-                    <div class="main-body__news-rating-container">
-                        <p class="main-body__news-rating background_orange">Рейтинг 4.5</p>
-                        <div class="main-body__news-comments-container background_orange">
-                            
-                            <p class="main-body__news-comments"><img src="../components/icons/commentIcon.svg" alt="" class="main-body__news-comments-icon">11</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="" class="main-body__news background_white">
-                <img src="../components/img/Helldivers 2.png" alt="" class="main-body__news-img">
-                <div class="main-body__news-info">
-                    <p class="main-body__news-type background_orange">Новость</p>
-                    <p class="main-body__news-content background_orange">Авторы Helldivers 2 пояснили, почему на ПК игра занимает так много места</p>
-                    <div class="main-body__news-rating-container">
-                        <p class="main-body__news-rating background_orange">Рейтинг 3.0</p>
-                        <div class="main-body__news-comments-container background_orange">
-                            
-                            <p class="main-body__news-comments"><img src="../components/icons/commentIcon.svg" alt="" class="main-body__news-comments-icon">22</p>
-                        </div>
-                    </div>
-                </div>
-            </a> -->
         </div>
 
         <div class="main-body__game-container">
-            <RouterLink to="/game" class="main-body__game background_white">
+            <RouterLink :to="{name: 'game', params: {gameId: 4}}" class="main-body__game background_white">
                 <img src="../components/img/Silent Hill f.png" alt="" class="main-body__game-icon">
                 <div class="main-body__game-info">
                     <p class="main-body__game-name background_orange">Silent Hill f</p>
@@ -150,7 +91,7 @@
 </template>
 
 <style scoped>
-  .main-body {
+    .main-body {
         width: 100%;
         display: flex;
         /* flex-direction: row; */
@@ -330,4 +271,19 @@
      .unactive-star {
           opacity: 50%;
      }
+
+     @media (max-width: 800px) {
+        .main-body {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-body__news-list {
+            max-width: 100%;
+        }
+
+        .main-body__game-container {
+             max-width: 60%;
+        }
+    }
 </style>

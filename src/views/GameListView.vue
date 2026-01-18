@@ -157,7 +157,7 @@
      }
 
      .filters__slider {
-          width: 16.6rem;
+          width: 16rem;
           --slider-connect-bg: black;
           --slider-handle-bg: #FF8300;
           --slider-tooltip-bg: #FFBB73;
