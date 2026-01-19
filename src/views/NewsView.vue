@@ -88,6 +88,7 @@
           border-radius: 15px;
           padding: 1rem;
           gap: 1rem;
+          box-sizing: border-box;
      }
      
      .main__title-container {
@@ -113,6 +114,7 @@
           font-weight: bold;
           border-radius: 25px;
           margin: 0;
+          padding: 0 1rem;
      }
 
      .main__info {
