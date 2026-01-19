@@ -2,6 +2,7 @@
      import Slider from '@vueform/slider';
      import { ref, onMounted } from 'vue';
      import GameCardItem from '@/components/GameCardItem.vue';
+     import gamesData from "@/components/json/games.json";
 
      let minYear = 1995;
      let maxYear = 2030;
@@ -11,7 +12,7 @@
      let maxRate = 5;
      const rates = ref([minRate, maxRate]);
 
-     const game_json = ref([]);
+     const game_json = ref(gamesData);
 
      let step = 5;
 
@@ -27,14 +28,14 @@
           }
      }
 
-     onMounted(async () => {
-          await fetch("/src/components/json/games.json")
-          .then((resp) => resp.json())
-          .then((json) => {
-               game_json.value = json;
-               console.log(json);
-          })
-     })
+     // onMounted(async () => {
+     //      await fetch("/src/components/json/games.json")
+     //      .then((resp) => resp.json())
+     //      .then((json) => {
+     //           game_json.value = json;
+     //           console.log(json);
+     //      })
+     // })
 </script>
 
 <template>

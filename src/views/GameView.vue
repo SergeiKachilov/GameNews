@@ -2,22 +2,17 @@
      import Comment from '@/components/Comment.vue';
      import { useRoute } from 'vue-router';
      import { onMounted, ref } from 'vue';
+     import gamesData from "@/components/json/games.json";
 
      const game = ref({});
-     const games_json = ref([]);
+     const games_json = ref(gamesData);
      const text_array = ref([]);
      const route = useRoute();
      // let id = route.params.newsId;
      Start();
 
      async function Start() {
-          // await fetch("/src/components/json/games.json")
-          // .then((resp) => resp.json())
-          // .then((json) => {
-          //      games_json.value = json;
-          //      console.log(json);
-          // })
-          await ReadJson();
+          GetInfo(route.params.gameId);
           ReadTxt();
      }
 
@@ -31,21 +26,21 @@
           });
      }
 
-     async function ReadJson(id) {
-          await fetch("/src/components/json/games.json")
-          .then((resp) => resp.json())
-          .then((json) => {
-               games_json.value = json;
-               console.log(json);
-               json.forEach(el => {
-                    if (el.id == id) {
-                         console.log("asd");
-                         game.value = el;
-                    }
-               });
-               GetInfo(route.params.gameId);
-          })
-     }
+     // async function ReadJson(id) {
+     //      await fetch("/src/components/json/games.json")
+     //      .then((resp) => resp.json())
+     //      .then((json) => {
+     //           games_json.value = json;
+     //           console.log(json);
+     //           json.forEach(el => {
+     //                if (el.id == id) {
+     //                     console.log("asd");
+     //                     game.value = el;
+     //                }
+     //           });
+     //           GetInfo(route.params.gameId);
+     //      })
+     // }
 
      function ReadTxt() {
           let file = game.value.text;
@@ -56,9 +51,10 @@
           });
      }
 
-     onMounted(async () => {
-          ReadTxt();
-     })
+     // onMounted(() => {
+     //      GetInfo(route.params.gameId);
+     //      ReadTxt();
+     // })
 </script>
 
 <template>
@@ -162,11 +158,11 @@
      }
 
      .game__genres {
-          width: 80%;
+          width: 75%;
      }
 
      .game__developer {
-          width: 20%;
+          width: 25%;
      }
 
      .game__bottom {
@@ -178,13 +174,13 @@
      }
 
      .game__release-date {
-          width: 20%;
+          width: 25%;
           font-size: 1rem;
      }
 
      .game__rating {
           display: flex;
-          width: 80%;
+          width: 75%;
           justify-content: space-between;
           box-sizing: border-box;
           gap: 1rem;

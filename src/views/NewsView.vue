@@ -2,12 +2,14 @@
      import Comment from '@/components/Comment.vue';
      import { onMounted, ref } from 'vue';
      import { useRoute } from 'vue-router';
+     import newsData from "@/components/json/news.json";
 
      const news = ref({});
-     const news_json = ref([]);
+     const news_json = ref(newsData);
      const text_array = ref([]);
      const route = useRoute();
      // let id = route.params.newsId;
+     GetInfo(route.params.newsId);
 
      function GetInfo(id) {
           console.log("el");
@@ -19,17 +21,17 @@
           });
      }
 
-     ReadJson();
+     // ReadJson();
 
-     function ReadJson() {
-          fetch("/src/components/json/news.json")
-          .then((resp) => resp.json())
-          .then((json) => {
-               news_json.value = json;
-               console.log(json);
-               GetInfo(route.params.newsId);
-          })
-     }
+     // function ReadJson() {
+     //      fetch("/src/components/json/news.json")
+     //      .then((resp) => resp.json())
+     //      .then((json) => {
+     //           news_json.value = json;
+     //           console.log(json);
+     //           GetInfo(route.params.newsId);
+     //      })
+     // }
      function ReadTxt() {
           let file = news.value.file;
           fetch(file)

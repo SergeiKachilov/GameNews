@@ -1,11 +1,12 @@
 <script setup>
     import NewsListItem from '@/components/NewsListItem.vue';
     import FooterItem from '@/components/FooterItem.vue';
+    import newsData from "@/components/json/news.json";
 
     import {ref, onMounted} from 'vue';
     import { RouterLink } from 'vue-router';
 
-    const news_json = ref([]);
+    const news_json = ref(newsData);
 
     onMounted(() => {
         fetch("src/components/json/news.json",)

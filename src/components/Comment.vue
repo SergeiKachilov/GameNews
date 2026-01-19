@@ -59,8 +59,9 @@
      }
 
      .comment__time {
-          width: 10%;
+          width: 15%;
           text-align: center;
+          box-sizing: border-box;
      }
 
      .comment__nickname {
@@ -78,7 +79,7 @@
      }
 
      .comment__avatar {
-          width: 15%;
+          width: 19%;
           border-radius: 50%;
           box-sizing: border-box;
      }

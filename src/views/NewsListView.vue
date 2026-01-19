@@ -1,16 +1,17 @@
 <script setup>
      import NewsListItem from '@/components/NewsListItem.vue';
      import { onMounted, ref } from 'vue';
-     const news_json = ref([]);
+     import newsData from "@/components/json/news.json";
+     const news_json = ref(newsData);
 
-    onMounted(() => {
-        fetch("src/components/json/news.json",)
-        .then((resp) => resp.json())
-        .then((json) => {
-            news_json.value = json;
-            console.log(json);
-        })
-    })
+//     onMounted(() => {
+//         fetch("src/components/json/news.json",)
+//         .then((resp) => resp.json())
+//         .then((json) => {
+//             news_json.value = json;
+//             console.log(json);
+//         })
+//     })
 </script>
 
 <template>
