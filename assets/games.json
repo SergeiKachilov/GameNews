@@ -1,0 +1,144 @@
+[
+     {
+          "id": "0",
+          "name": "Resident Evil: Requiem",
+          "genre": ["Экшен", "Приключение", "Хоррор", "Выживание"],
+          "logo": "/src/components/img/RE_RequiemLogo.png",
+          "developer": "Capcom",
+          "steam_rating": 5.0,
+          "site_rating": 4.3,
+          "release_date": "27.02.2026",
+          "text": "/src/components/txt/REGame.txt",
+          "comments": [
+               {
+                    "id": 0,
+                    "username": "Timoleont",
+                    "avatar": "/src/components/img/Timoleont.png",
+                    "date": "3 октября",
+                    "text": "Поправьте, если ошибаюсь, но ведь и в первой части все босы прекрасно мочились стрельбой безо всяких головоломок — хватило бы боеприпасов. Я задрот, который обшаривал каждый угол и экономил каждый патрон, поэтому хватало на всех.",
+                    "rating": 10
+               }
+          ]
+     },
+     {
+          "id": 1,
+          "name": "Dying Light: The Beast",
+          "genre": ["Хоррор", "Выживание"],
+          "logo": "/src/components/img/DyingLightLogo.png",
+          "developer": "Techland",
+          "steam_rating": 4.4,
+          "site_rating": 4.8,
+          "release_date": "18.09.2025",
+          "text": "/src/components/txt/DyingLightGame.txt",
+          "comments": [
+               {
+                    "id": 1,
+                    "username": "gekans",
+                    "avatar": "/src/components/img/gekans.jpeg",
+                    "date": "15 декабря",
+                    "text": "Если нравится DL, то определенно стоит, вайб первой части с техничкой от второй. Мне прям очень зашло",
+                    "rating": 5
+               }
+          ]
+     },
+     {
+          "id": 2,
+          "name": "Clair Obscur: Expedition 33",
+          "genre": ["Экшен", "Ролевая"],
+          "logo": "/src/components/img/ClairObscurLogo.png",
+          "developer": "Sandfal Interactive",
+          "steam_rating": 5.0,
+          "site_rating": 4.3,
+          "release_date": "24.04.2025",
+          "text": "/src/components/txt/ClairObscurGame.txt",
+          "comments": [
+               {
+                    "id": 2,
+                    "username": "Jake Gyllenhaal",
+                    "avatar": "/src/components/img/GaryZhelezo.png",
+                    "date": "14 июня",
+                    "text": "Прекрасная игра, очень сильно вовлекает в сюжет и атмосферу, чему способствуют невероятно красивые локации и прекрасный саундтрек.",
+                    "rating": 8
+               }
+          ]
+     },
+     {
+          "id": 3,
+          "name": "Helldivers 2",
+          "genre": ["Экшен", "Шутер", "Научная фантастика"],
+          "logo": "/src/components/img/HelldiversLogo.png",
+          "developer": "Arrowhead Game Studios",
+          "steam_rating": 3.9,
+          "site_rating": 4.0,
+          "release_date": "27.02.2026",
+          "text": "/src/components/txt/HelldiversGame.txt",
+          "comments": [
+               {
+                    "id": 3,
+                    "username": "BeTPoJloM",
+                    "avatar": "/src/components/img/Requiem.png",
+                    "date": "15 сентября",
+                    "text": "ещё бы оптимизацию завезли. хотя за модернизацию оружия, моё почтение.",
+                    "rating": -1
+               }
+          ]
+     },
+     {
+          "id": 4,
+          "name": "Silent Hill f",
+          "genre": ["Хоррор", "Выживание"],
+          "logo": "/src/components/img/Silent Hill f.png",
+          "developer": "Konami",
+          "steam_rating": 4.0,
+          "site_rating": 3.5,
+          "release_date": "25.09.2025",
+          "text": "/src/components/txt/SilentHillGame.txt",
+          "comments": [
+               {
+                    "id": 4,
+                    "username": "AshBornd",
+                    "avatar": "/src/components/img/AshBornd.png",
+                    "date": "Вчера",
+                    "text": "Инди хоррор из steam за 200 рублей.",
+                    "rating": 1
+               },
+               {
+                    "id": 5,
+                    "username": "Александр Матвейчук",
+                    "avatar": "/src/components/img/Alexander.png",
+                    "date": "25 ноября",
+                    "text": "Хорошая игра",
+                    "rating": 4
+               },
+               {
+                    "id": 6,
+                    "username": "GaryZhelezo",
+                    "avatar": "/src/components/img/GaryZhelezo.png",
+                    "date": "23 ноября",
+                    "text": "Хороший хорор, средний соулс-лайк",
+                    "rating": 2
+               }
+          ]
+     },
+     {
+          "id": 5,
+          "name": "Hollow Knight: Silksong",
+          "genre": ["Приключение", "Инди", "Платформер"],
+          "logo": "/src/components/img/SilksongLogo.png",
+          "developer": "Team Cherry",
+          "steam_rating": 4.4,
+          "site_rating": 4.9,
+          "release_date": "04.09.2025",
+          "text": "/src/components/txt/SilkSongGame.txt",
+          "comments": [
+               {
+                    "id": 7,
+                    "username": "Requiem_For_A_Dream",
+                    "avatar": "/src/components/img/Requiem.png",
+                    "date": "Сегодня",
+                    "text": "Прекрасная игра, столько лет ожиданий не пропали даром. С момента релиза прошло немало времени и игру допилили до идеала. Всем рекомендую. Буду ждать дальнейших изменений и DLC.",
+                    "rating": 6
+               }
+          ]
+     }
+]
