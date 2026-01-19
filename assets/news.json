@@ -5,13 +5,13 @@
           "text": "Resident Evil Requiem добавили в вишлист более 2 млн раз",
           "rating": "5.0",
           "comments": "32",
-          "image": "RE_wishlist.png",
-          "file": "/src/components/txt/RE.txt",
+          "image": "/assets/RE_wishlist.png",
+          "file": "/assets/RE.txt",
           "commentaries": [
                {
                     "id": 7,
                     "username": "Requiem_For_A_Dream",
-                    "avatar": "Requiem.png",
+                    "avatar": "/assets/Requiem.png",
                     "date": "Сегодня",
                     "text": "Пусть предзаказы открывают.",
                     "rating": -1
@@ -25,13 +25,13 @@
           "text": "Для Dying Light: The Beast вышло обновление с «Новой игрой +» и рейтрейсингом",
           "rating": "4.0",
           "comments": "10",
-          "image": "DyingLight.png",
-          "file": "DyingLightNews.txt",
+          "image": "/assets/DyingLight.png",
+          "file": "/assets/DyingLightNews.txt",
           "commentaries": [
                {
                     "id": 0,
                     "username": "Timoleont",
-                    "avatar": "AshBornd.png",
+                    "avatar": "/assets/AshBornd.png",
                     "date": "3 октября",
                     "text": "Что-то нету никаких отличий, что с лучами что без них, зато минус 50 фпс роняет.",
                     "rating": 2
@@ -45,13 +45,13 @@
           "text": "У Clair Obscur: Expedition 33 больше всего номинаций на Golden Joystick Awards 2025",
           "rating": "4.5",
           "comments": "11",
-          "image": "ClairObscur.png",
-          "file": "ClairObscurNews.txt",
+          "image": "/assets/ClairObscur.png",
+          "file": "/assets/ClairObscurNews.txt",
           "commentaries": [
                {
                     "id": 0,
                     "username": "Timoleont",
-                    "avatar": "Timoleont.png",
+                    "avatar": "/assets/Timoleont.png",
                     "date": "3 октября",
                     "text": "Экспедиция — огонь, но Силк тоже бомба, хоть у меня от нее и горит всё, что только можно))",
                     "rating": 0
@@ -65,13 +65,13 @@
           "text": "Авторы Helldivers 2 пояснили, почему на ПК игра занимает так много места",
           "rating": "3.0",
           "comments": "22",
-          "image": "Helldivers.png",
-          "file": "HelldiversNews.txt",
+          "image": "/assets/Helldivers.png",
+          "file": "/assets/HelldiversNews.txt",
           "commentaries": [
                {
                     "id": 0,
                     "username": "Timoleont",
-                    "avatar": "Timoleont.png",
+                    "avatar": "/assets/Timoleont.png",
                     "date": "3 октября",
                     "text": "Ха, Modern warfare 2019 pc version ее обгоняет-165 гигабайт! А какая нибудь часть Forza весит за 200 гб.",
                     "rating": 10
